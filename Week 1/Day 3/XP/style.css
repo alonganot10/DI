@@ -1,0 +1,14 @@
+body {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	background: url('https://landingstock.com/wp-content/uploads/landingstock_images_27.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+
+div {
+	font-size: 2vw;
+	font-family: verdana;
+}
