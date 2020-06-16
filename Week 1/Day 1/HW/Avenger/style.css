@@ -1,0 +1,73 @@
+body {
+	font-family: impact;
+	margin: 0px;
+}
+
+ul, li {
+	display: inline;
+}
+
+li {
+	margin-left: 20px;
+	margin-right: 20px;
+
+}
+nav {
+	background-color: black;
+	display: block;
+	color: white;
+	margin: 0px;
+}
+
+table {
+  table-layout: fixed ;
+  width: 100% ;
+  margin: 0px;
+}
+
+td {
+  width: 50% ;
+  vertical-align: top;
+} 
+#links {
+	display: flex;
+	justify-content: flex-end;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+	margin: 0px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 4vw;
+}
+
+.para {
+	margin-left: 10px;
+	font-size: 2.5vw;
+}
+
+footer {
+	padding: 3px;
+	background-color: black;
+	color: white;
+	font-family: times;
+	display: flex;
+	justify-content: space-between;
+}
+
+a {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	margin-right: 10px;
+	color: lightblue;
+	font-size: 20px;
+}
+
+.footertext {
+	margin-left: 10px;
+}

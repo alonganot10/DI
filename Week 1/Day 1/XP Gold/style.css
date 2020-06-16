@@ -1,0 +1,23 @@
+body {
+	background-color: #E5EDF5
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+}
+
+.signin {
+	background-color: #2185DD;
+	color: white;
+	text-decoration: none;
+	border-radius: 10px; padding-left: 15px; padding-right: 15px; 
+	display: flex;
+	align-items: center;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+div {
+	background-image: url("https://www.lendingcrowd.com/wp-content/uploads/2016/03/pablo-12.png");
+	background-size: cover;
+}
