@@ -1,0 +1,40 @@
+#wrapper {
+	height: 10vh;
+	border: 1px solid black;
+	padding: 2vh;
+	display: flex;
+	justify-content: space-between;
+}
+
+.block {
+	border: 1px solid black;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lightblue {
+	background-color: lightblue;
+}
+
+.red {
+	background-color: red;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.small {
+	border: 1px solid black;
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body {
+	font-size: 3vw;
+	color: white;
+}

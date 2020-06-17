@@ -1,0 +1,27 @@
+#wrapper {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+}
+
+#size {
+	margin: 2px;
+	height: 33%;
+	background-color: lightblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid black;
+}
+
+.middle {
+	width: 25%;
+	display: flex;
+	align-self: flex-end;
+}
+
+body {
+	font-size: 2vw;
+	color: white;
+}

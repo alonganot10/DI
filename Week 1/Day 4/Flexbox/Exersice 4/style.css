@@ -1,0 +1,29 @@
+#wrapper {
+	height: 100vh;
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+}
+
+#block {
+	background-color: lightblue;
+	border: 1px solid gray;
+	height: 33%;
+	margin: 2px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.small {
+	width: 60%;
+
+	display: flex;
+	align-self: center;
+}
+
+body {
+	font-size: 3vw;
+	color: white;
+}

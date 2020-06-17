@@ -1,0 +1,55 @@
+.blue {
+	background-color: blue;
+	grid-column: 1 / 11;
+}
+
+.purple {
+	background-color: purple;
+	grid-column: 1 / 5;
+	grid-row: 2 / 5;
+}
+
+.orange {
+	background-color: orange;
+	grid-column: 5 / 11;
+	grid-row: 2 / 7;
+}
+
+.green {
+	background-color: green;
+	grid-column: 1 / 5;
+	grid-row: 5 / 9;
+}
+
+.gray {
+	background-color: gray;
+	grid-column: 5 / 11;
+	grid-row: 7 / 9;
+}
+
+.darkgreen {
+	background-color: darkgreen;
+	grid-column: 1 / 8;
+	grid-row: 9 / 11;
+}
+
+.pink {
+	background-color: pink;
+	grid-column: 8 / 11;
+	grid-row: 9 / 11;
+}
+
+.brown {
+	background-color: brown;
+	grid-column: 1 / 11;
+}
+
+#wrapper {
+	height: 100vh;
+	border: 1px solid black;
+
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(11, 1fr);
+	grid-gap: 10px;
+}

@@ -1,9 +1,7 @@
 body {
 	position: fixed;
-	height: 100%;
-	width: 100%;
-	margin: 0px;
-	padding: 0px;
+	height: 100vh;
+	width: 100vw;
 	background: url('https://landingstock.com/wp-content/uploads/landingstock_images_27.jpg') no-repeat center center fixed;
 	background-size: cover;
 }
@@ -11,4 +9,13 @@ body {
 div {
 	font-size: 2vw;
 	font-family: verdana;
+}
+
+.container {
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

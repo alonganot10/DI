@@ -1,0 +1,61 @@
+#wrapper {
+	height: 100vh;
+	width: 100vw;
+
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 	"one one one"
+							"two three four"
+							"two five five"
+							"six six seven"
+							"eight eight eight";
+}
+
+#one {
+	background-color: purple; 
+	grid-area: one;
+}
+
+#two {
+	background-color: blue;
+	grid-area: two;
+}
+
+#three {
+	background-color: lightblue;
+	grid-area: three;
+}
+
+#four {
+	background-color: cyan;
+	grid-area: four;
+}
+
+#five {
+	background-color: pink;
+	grid-area: five;
+}
+
+#six {
+	background-color: purple;
+	grid-area: six;
+}
+
+#seven {
+	background-color: blue;
+	grid-area: seven;
+}
+
+#eight {
+	background-color: lightblue;
+	grid-area: eight;
+}
+
+.middle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-size: 3vw;
+	color: white;
+}
