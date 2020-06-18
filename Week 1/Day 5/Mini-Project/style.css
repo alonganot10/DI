@@ -1,0 +1,32 @@
+/*@media only screen and (min-width: 1450px) {*/
+	#container {
+		padding-left: 5%;
+		padding-right: 5%;
+		height: 55vh;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+
+	}
+
+	.box {
+		margin: 10px;
+		width: 410px;
+		height: 230px;
+	}
+
+	.fixed-top {
+		padding-right: 6%;
+		padding-left: 6%;
+	}
+
+	.jumbotron {
+		padding-left: 5.5%;
+		padding-top: 5%;
+	}
+/*}*/
+.alert {
+	width: 30%;
+}

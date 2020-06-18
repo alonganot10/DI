@@ -1,7 +1,67 @@
 #wrapper {
 	height: 100vh;
 	background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/ad/BlankMap-World_gray.svg');
+	font-family: arial;
 
 	display: grid;
-	gri
+	grid-gap: 20px;
+	grid-template-areas: 
+	"header header header"
+	"numbers numbers numbers"
+	"boxone boxtwo boxthree"
+	"boxone boxtwo boxthree"
+	"boxone boxtwo boxthree"
+	"boxone boxtwo boxthree";
+}
+
+.header {
+	/*background-color: red;*/
+	border: 1px solid black;
+	text-align: center;
+
+	grid-area: header;
+
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.numbers {
+	/*background-color: orange;*/
+	border: 1px solid black;
+
+	grid-area: numbers;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.boxone {
+	/*background-color: blue;*/
+	border: 1px solid black;
+	grid-area: boxone;
+}
+
+.boxtwo {
+	/*background-color: yellow;*/
+	border: 1px solid black;
+	grid-area: boxtwo;
+}
+
+.boxthree {
+	/*background-color: green;*/
+	border: 1px solid black;
+	grid-area: boxthree;
+}
+
+
+
+.num {
+	color: blue;
+}
+
+h6 {
+	color: gray;
 }
