@@ -4,8 +4,10 @@ console.log(meme);
 
 let str1 = 'mix';
 let str2 = 'pod';
-let str3 = str1+ ' ' + str2;
-console.log(str3);
+let s1 = str1[str1.length-1];
+let s2 = str2[str2.length-1];
+str1 = str1.replace(str1[str1.length-1], s2);
+str2 = str2.replace(str2[str2.length-1], s1);
 
 let num1 = prompt("Enter a number", 0);
 let num2 = prompt('Enter another number', 0);
