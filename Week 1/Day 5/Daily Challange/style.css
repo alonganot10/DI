@@ -42,25 +42,24 @@
 
 @keyframes swing
 {
-    15%
+    20%
     {
-        transform: translateX(100px);
+        transform: translateX(200px);
     }
-    30%
+    40%
     {
-        transform: translateX(-100px);
+        transform: translateX(-200px);
+        transform: translateY(200px);
     }
-    50%
+    60%
     {
-        transform: translateX(60px);
+        transform: translateX(-200px);
+        transform: translateY(-200px);
     }
-    65%
-    {
-        transform: translateX(-60px);
-    }
+
     80%
     {
-        transform: translateX(30px);
+        transform: translateX(-200px);
     }
     100%
     {
@@ -69,7 +68,7 @@
 }
 
 .swing:active {
-	animation: swing 1s ease;
+	animation: swing 2s ease;
 	animation-iteration-count: 1;
 }
 
