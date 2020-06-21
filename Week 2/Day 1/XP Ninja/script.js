@@ -1,10 +1,10 @@
-// let numbers = prompt("Enter numbers", "here");
-// console.log(numbers);
-// if(numbers.indexOf(", ")) {
-// 	numbers = numbers.replaceAll(", ", "*");
-// }
-// console.log(numbers);
-// console.log(eval(numbers));
+let numbers = prompt("Enter numbers", "here");
+console.log(numbers);
+if(numbers.indexOf(", ")) {
+	numbers = numbers.replaceAll(", ", "*");
+}
+console.log(numbers);
+console.log(eval(numbers));
 
 let num1 = Number(prompt("Enter a number", "here"));
 console.log(num1);
