@@ -30,6 +30,8 @@ function encryption(str) {
 			console.log(array[i]);
 			array[i] = String.fromCharCode(String(array[i]));
 		}
+		str = array.toString();
+		str = str.replace(/,/gi, "");
 	} else if (des == 2) {
 		let choose = prompt("Enter a number to decrypt the sentence with");
 		for (let i = 0; i < str.length; i++) {
@@ -58,10 +60,12 @@ function encryption(str) {
 			console.log(array[i]);
 			array[i] = String.fromCharCode(String(array[i]));
 		}
+		str = array.toString();
+		str = str.replace(/,/gi, "");
 	} else {
 			console.log("I Said 1 or 2!");
 	}
-	return array;
+	return str;
 }
 let str = prompt("Enter a sentence");
 console.log(encryption(str));
