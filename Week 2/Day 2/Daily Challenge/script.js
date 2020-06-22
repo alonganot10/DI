@@ -5,4 +5,6 @@ let bad = str.indexOf("bad");
 if (not < bad && not != -1 && bad != -1) {
 	array.splice(not, bad-not+3, "good");
 }
-console.log(array);
+str = array.toString();
+str = str.replace(/,/gi, "");
+console.log(str);
