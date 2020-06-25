@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<style>
+		button {
+			width:70px;
+			height:70px;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="wrapper">
+		<div id="calc" class="bar" type="text">0</div>
+		<button class="Zero small" type="button" name="button" onclick="javascript:my_f(0);">0</button>
+		<button class="one small" type="button" name="button" onclick="javascript:my_f(1);">1</button>
+		<button class="two small" type="button" name="button" onclick="javascript:my_f(2);">2</button>
+		<button class="three small" type="button" name="button" onclick="javascript:my_f(3);">3</button>
+		<button class="four small" type="button" name="button" onclick="javascript:my_f(4);">4</button>
+		<button class="five small" type="button" name="button" onclick="javascript:my_f(5);">5</button>
+		<button class="six small" type="button" name="button" onclick="javascript:my_f(6);">6</button>
+		<button class="seven small" type="button" name="button" onclick="javascript:my_f(7);">7</button>
+		<button class="eight small" type="button" name="button" onclick="javascript:my_f(8);">8</button>
+		<button class="nine small" type="button" name="button" onclick="javascript:my_f(9);">9</button>
+		<button class="dot small" type="button" name="button" onclick="javascript:my_f('.');">.</button>
+		<button class="plus small" type="button" name="button" onclick="javascript:my_f('+');">+</button>
+		<button class="minus small" type="button" name="button" onclick="javascript:my_f('-');">-</button>
+		<button class="times small" type="button" name="button" onclick="javascript:my_f('*');">X</button>
+		<button class="divide small" type="button" name="button" onclick="javascript:my_f('/');">/</button>
+		<button class="equals small" type="button" name="button" onclick="javascript:calculate();">=</button>
+		<button class="reset big" type="reset" name="button" onclick="javascript:reset();">reset</button>
+		<button class="clear big" type="button" name="button" onclick="javascript:clearCalc();">clear</button>
+	</div>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

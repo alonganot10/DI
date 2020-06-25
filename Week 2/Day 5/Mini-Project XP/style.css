@@ -1,0 +1,139 @@
+div {
+	font-size: 10vh;
+}
+
+button {
+	color: white;
+}
+
+.small {
+ width: 22.5vw;
+ height: 100%;
+}
+
+.big {
+	width: 45vw;
+	height: 100%;
+}
+
+#container {
+	height: 100vh;
+	width: 100vw;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#wrapper {
+	height: 90%;
+	width: 90%;
+
+	display: grid;
+	grid-gap: .5vh;
+	grid-template-areas: 
+	"bar bar bar bar"
+	"Zero one two three"
+	"four five six seven"
+	"eight nine dot plus"
+	"minus times divide equals"
+	"reset reset clear clear";
+}
+
+.bar {
+	grid-area: bar;
+	border: .5vh solid lightgray;
+	border-radius: 10px;
+	height: 100%;
+	padding-left: 10px;
+}
+.Zero {
+	grid-area: Zero;
+	background-color: mediumseagreen;
+	border-radius: 5px;
+}
+.one {
+	grid-area: one;
+	background-color: mediumseagreen;
+	border-radius: 5px;
+}
+.two {
+	grid-area: two;
+	background-color: mediumseagreen;
+	border-radius: 5px;
+}
+.three {
+	grid-area: three;
+	background-color: mediumseagreen;
+	border-radius: 5px;
+}
+.four {
+	grid-area: four;
+	background-color: mediumseagreen;
+	border-radius: 5px;
+}
+.five {
+	grid-area: five;
+	background-color: mediumseagreen;
+	border-radius: 5px;
+}
+.six {
+	grid-area: six;
+	background-color: mediumseagreen;
+	border-radius: 5px;
+}
+.seven {
+	grid-area: seven;
+	background-color: mediumseagreen;
+	border-radius: 5px;
+}
+.eight {
+	grid-area: eight;
+	background-color: mediumseagreen;
+	border-radius: 5px;
+}
+.nine {
+	grid-area: nine;
+	background-color: mediumseagreen;
+	border-radius: 5px;
+}
+.dot {
+	grid-area: dot;
+	background-color: mediumseagreen;
+	border-radius: 5px;
+}
+.plus {
+	grid-area: plus;
+	background-color: darkorange;
+	border-radius: 5px;
+}
+.minus {
+	grid-area: minus;
+	background-color: darkorange;
+	border-radius: 5px;
+}
+.times {
+	grid-area: times;
+	background-color: darkorange;
+	border-radius: 5px;
+}
+.divide {
+	grid-area: divide;
+	background-color: darkorange;
+	border-radius: 5px;
+}
+.equals {
+	grid-area: equals;
+	background-color: darkorange;
+	border-radius: 5px;
+}
+.reset {
+	grid-area: reset;
+	background-color: steelblue;
+	border-radius: 5px;
+}
+.clear {
+	grid-area: clear;
+	background-color: red;
+	border-radius: 5px;
+}
