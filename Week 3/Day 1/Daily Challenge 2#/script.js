@@ -20,39 +20,21 @@ for (let i = 0; i < 14; i++) {
 }
 
 let solar_system = [mercury, venus, earth, mars, jupiter, saturn, uranus, neptune];
-let colors = ["orange", "gray", "blue", "red", "brown", "lightbrown", "lightblue", "darkblue"];
-for (let i = 0; i < solar_system.length; i++) {
-	document.body.append(`<div>${solar_system[i]}</div>`);
+let colors = ["orange", "gray", "blue", "red", "brown", "yellow", "lightblue", "darkblue"];
+let all = document.createDocumentFragment();
+for (let i=0; i<solar_system.length; i++) {
+	let newDiv = document.createElement('div');
+	newDiv.id = i;
+	newDiv.className = 'planet';
+	newDiv.style.background = colors[i];
+	all.appendChild(newDiv);
+
+	for (let x=0; x<solar_system[i].length; x++) {
+		let newMoon = document.createElement('div');
+		newMoon.id = "moon "+(x+1);
+		newMoon.className = 'moon';
+		newMoon.innerHTML = x+1;
+		all.appendChild(newMoon);
+	}
 }
-// let mer = document.createElement('div');
-// mer.className = 'planet';
-// document.body.appendChild(mer);
-// mer.style.background = 'orange';
-// let ven = document.createElement('div');
-// ven.className = 'planet';
-// document.body.appendChild(ven);
-// ven.style.background = 'gray';
-// let ear = document.createElement('div');
-// ear.className = 'planet';
-// document.body.appendChild(ear);
-// ear.style.background = 'blue';
-// let mar = document.createElement('div');
-// mar.className = 'planet';
-// document.body.appendChild(mar);
-// mar.style.background = 'red';
-// let jup = document.createElement('div');
-// jup.className = 'planet';
-// document.body.appendChild(jup);
-// jup.style.background = 'brown';
-// let sat = document.createElement('div');
-// sat.className = 'planet';
-// document.body.appendChild(sat);
-// sat.style.background = 'darkorange';
-// let ura = document.createElement('div');
-// ura.className = 'planet';
-// document.body.appendChild(ura);
-// ura.style.background = 'lightblue';
-// let nep = document.createElement('div');
-// nep.className = 'planet';
-// document.body.appendChild(nep);
-// nep.style.background = 'darkblue';
+document.body.appendChild(all);
