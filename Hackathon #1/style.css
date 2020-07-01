@@ -1,0 +1,27 @@
+html, body {
+	margin: 0px;
+	padding: 0px;
+}
+
+.white {
+	background-color: white;
+	border: 1px solid black;
+	width: 12.5vh;
+	height: 12.5vh;
+}
+
+.black {
+	background-color: maroon;
+	border: 1px solid black;
+	width: 12.5vh;
+	height: 12.5vh;
+}
+
+#wrapper {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto auto auto;
+
+	width: 100vh;
+	height: 100vh;
+	border: 1px solid black;
+}

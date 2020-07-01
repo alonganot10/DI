@@ -15,30 +15,28 @@ let Book2 = {
 let allBooks = [Book1, Book2];
 
 let table = document.createElement('table');
-for (let i = 0; i < 4; i +=2) {
-	let row1 = document.createElement('th');
-	let column1 = document.createElement('td');
-	let row2 = document.createElement('tr');
-	let column2 = document.createElement('td');
+for (let i = 0; i < (allBooks.length*2); i ++) {
+	let row = document.createElement('tr');
+	let column = document.createElement('td');
 
-	table.appendChild(row1);
-	table.children[i].appendChild(column1);
-	table.appendChild(row2);
-	table.children[i+1].appendChild(column2);
+	table.appendChild(row);
+	table.children[i].appendChild(column);
 }
 
 document.body.appendChild(table);
 
-table.children[0].firstChild.innerHTML = `${allBooks[0].title} written by ${allBooks[0].auther}`;
-let image1 = document.createElement('img');
-image1.src = allBooks[0].image;
-image1.style.width = "100vw";
-table.children[1].firstChild.appendChild(image1);
-table.children[2].firstChild.innerHTML = `${allBooks[1].title} written by ${allBooks[1].auther}`;
-let image2 = document.createElement('img');
-image2.src = allBooks[1].image;
-image2.style.width = "100vw";
-table.children[3].firstChild.appendChild(image2);
+function add_book(bookNumber, bookrow) {
+	let table = document.getElementsByTagName('table')[0];
+	table.children[bookrow].firstChild.innerHTML = `${allBooks[bookNumber].title} written by ${allBooks[bookNumber].auther}`;
+	let image = document.createElement('img');
+	image.src = allBooks[bookNumber].image;
+	image.style.width = "100px";
+	table.children[bookrow+1].firstChild.appendChild(image);
+}
+
+for (let i = 0; i < allBooks.length; i++) {
+	add_book(i, i*2);
+}
 
 for (let i in allBooks) {
 	if (allBooks[i].alreadyRead) {
