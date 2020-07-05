@@ -4,21 +4,36 @@
 function create_deck() {
 	let clover_deck = [];
 	for (let i = 0; i < 13; i++) {
-		clover_deck.push([`cards/C_${i+1}.jpg`, i+1]);
+		let x = i;
+		if (i >= 10) {
+			x = 9;
+		}
+		clover_deck.push([`cards/C_${i+1}.jpg`, x+1]);
 	}
 	let diamond_deck = [];
 	for (let i = 0; i < 13; i++) {
-		diamond_deck.push([`cards/D_${i+1}.jpg`, i+1]);
+		let x = i;
+		if (i >= 10) {
+			x = 9;
+		}
+		diamond_deck.push([`cards/D_${i+1}.jpg`, x+1]);
 	}
 	let spade_deck = [];
 	for (let i = 0; i < 13; i++) {
-		spade_deck.push([`cards/S_${i+1}.jpg`, i+1]);
+		let x = i;
+		if (i >= 10) {
+			x = 9;
+		}
+		spade_deck.push([`cards/S_${i+1}.jpg`, x+1]);
 	}
 	let heart_deck = [];
 	for (let i = 0; i < 13; i++) {
-		heart_deck.push([`cards/H_${i+1}.jpg`, i+1]);
+		let x = i;
+		if (i >= 10) {
+			x = 9;
+		}
+		heart_deck.push([`cards/H_${i+1}.jpg`, x+1]);
 	}
-
 	return [clover_deck, diamond_deck, spade_deck, heart_deck];
 }
 
@@ -71,8 +86,6 @@ function is_bust() {
 	for (let i of player_cards) {
 		if (i[1] == 14) {
 			total += 11;
-		} else if (i[1] == 11 || i[1] == 12 || i[1] == 13) {
-			total += 10;
 		} else {
 			total += i[1];
 		}
@@ -132,6 +145,9 @@ let final_total = 0;
 function stand() {
 	while (player_cards.length > 0) {
 		let add = player_cards.pop();
+		if (add[1] == 14) {
+			add[1] = 11;
+		}
 		console.log(add[1]);
 		final_total += add[1];
 	}
@@ -148,10 +164,38 @@ function card_reveal() {
 }
 
 //################################################
+// final dealer side calcuation to check if player
+// won or lost
+
+let dealer_amount = 0;
+function dealer_turn() {
+	if (dealer_cards[0][1] == 1 && dealer_cards[1][1] > 5) {
+		dealer_amount += 11 + dealer_cards[1][1];
+	} else if (dealer_cards[1][1] == 1 && dealer_cards[0][1] > 5) {
+		dealer_amount += 11 + dealer_cards[0][1];
+	} else {
+		dealer_amount += dealer_cards[0][1] + dealer_cards[1][1];
+	}
+	while (dealer_amount < 17 && dealer_amount < final_total) {
+		dealer_cards.push(deck.pop());
+		let new_dealer_card = document.createElement("img");
+		new_dealer_card.src = dealer_cards[dealer_cards.length-1][0];
+		dealer_side.appendChild(new_dealer_card);
+		dealer_amount += dealer_cards[dealer_cards.length-1][1];
+	}
+	console.log(dealer_amount+" dealer");
+	if (dealer_amount >= final_total && dealer_amount < 22) {
+		console.log("you lose");
+	} else {
+		console.log("you win");
+	}
+}
+
+//################################################
 
 
 
-
+// creates and suffles a new deck
 
 let deck = create_deck();
 deck = shuffle_deck(deck);
@@ -186,7 +230,7 @@ let card2 = document.createElement("img");
 card2.src = player_cards[1][0];
 player_side.appendChild(card2);
 
-// check for bust
+// check for bust or win
 
 let result;
 let hit_button = document.getElementById("hit");
@@ -202,7 +246,7 @@ if (result == 1) {
 	result = 0;
 }
 
-// dealers' turn
+// dealers' turn after stand
 
 let dealer_stand = document.getElementById("stand");
 dealer_stand.addEventListener("click", card_reveal);
