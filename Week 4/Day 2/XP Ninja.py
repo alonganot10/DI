@@ -70,3 +70,18 @@ print(int.__doc__)
 
 
 
+user_list = input("Enter numbers seperated by commas: ")
+user_list = user_list.split(",")
+user_tuple = tuple(user_list)
+print(user_list)
+print(user_tuple)
+
+
+
+
+user_numbers = input("Enter numbers seperated by commas: ")
+user_numbers = user_numbers.split(",")
+result_numbers = []
+for i in user_numbers:
+    result_numbers.append(int((2*50*int(i)/30)**0.5))
+print(result_numbers)
