@@ -4,7 +4,7 @@ import string
 num1 = int(input("Enter first: "))
 num2 = int(input("Enter second: "))
 num3 = int(input("Enter third: "))
-if num1 < num2 and num1 < num3:
+if num1 > num2 and num1 > num3:
     print(num1)
 elif num2 > num1 and num2 > num3:
     print(num2)
