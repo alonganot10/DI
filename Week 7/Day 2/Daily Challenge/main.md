@@ -1,0 +1,7 @@
+1. count 0
+
+2. count 2 
+
+3. count 0
+
+4. count 2
