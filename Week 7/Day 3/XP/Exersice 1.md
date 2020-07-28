@@ -53,24 +53,22 @@ didnt create customer_review if its on delete no action it will be needed to del
    inner join friend
    on friend.inventory_id = inventory.inventory_id
    and film.film_id = inventory.film_id
-4. -- select * from film order by replacement_cost desc limit 1
-   with friend as (
-   	select rental.inventory_id
-   	from rental
-   	inner join customer
-   	on customer.first_name = 'Matthew' and customer.last_name = 'Mahan'
-   	and customer.customer_id = rental.customer_id
-   )
-   select film.*
-   from film
-   inner join inventory
-   on film.film_id = inventory.film_id
-   and film.title like '%Boat%' or film.description like '%Boat%'
-   inner join friend
-   on friend.inventory_id = inventory.inventory_id
-   and film.film_id = inventory.film_id
-   order by film.replacement_cost desc
-   limit 1
+4.  with friend as (
+       	select rental.inventory_id
+       	from rental
+       	inner join customer
+       	on customer.first_name = 'Matthew' and customer.last_name = 'Mahan'
+       	and customer.customer_id = rental.customer_id
+       )
+    select distinct film.title, film.replacement_cost
+    from film
+    inner join inventory
+    on film.film_id = inventory.film_id
+    and film.title like '%Boat%' or film.description like '%Boat%'
+    inner join friend
+    on friend.inventory_id = inventory.inventory_id
+    order by film.replacement_cost desc
+    limit 1
 
 
 with action_films as (
