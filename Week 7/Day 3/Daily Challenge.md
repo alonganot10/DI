@@ -2,11 +2,11 @@ create table one_to_one (
 	id serial primary key
 );
 create table one_to_one2 (
-	id serial primary key,
+	id integer primary key,
 	constraint fk_id foreign key (id) references one_to_one (id)
 );
 create table one_to_many (
-	id serial primary key,
+	id integer primary key,
 	foreign key (id) references one_to_one (id)
 );
 create table many_to_many (
