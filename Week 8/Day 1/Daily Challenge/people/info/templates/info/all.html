@@ -1,0 +1,12 @@
+{% extends 'info/base.html' %}
+
+{% block content %}
+    {% for i in all|dictsort:"age" %}
+        <ul>
+            {% for x, y in i.items %}
+                <li>{{ x }}: {{ y }}</li>
+            {% endfor %}
+            <a href="{% url "selected" i.id %}">Click</a>
+        </ul>
+    {% endfor %}
+{% endblock content %}

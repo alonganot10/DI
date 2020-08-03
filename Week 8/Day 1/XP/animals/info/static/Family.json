@@ -1,0 +1,17 @@
+{
+  "1": {
+    "name": "mammal"
+  },
+  "2": {
+    "name": "reptile"
+  },
+  "3": {
+    "name": "insect"
+  },
+  "4": {
+    "name": "arachnid"
+  },
+  "5": {
+    "name": "bird"
+  }
+}
